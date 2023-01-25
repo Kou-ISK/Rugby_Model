@@ -1,16 +1,23 @@
 package Model.Player
 
-data class Player (
-    private val shirtNo:Int,
-    private val position:Position,
-    private val positionCategory1: PositionCategory1,
-    private val positionCategory2: PositionCategory2,
-    private val bodyHeight:Int,
-    private val bodyWeight:Int,
-    private val speed:Int
-    )
+data class Player(
+    // 背番号
+    val shirtNo: Int,
+    // ポジション
+    val position: Position,
+    // ポジション分類1
+    var positionCategory1: PositionCategory1? = null,
+    // ポジション分類2
+    var positionCategory2: PositionCategory2? = null,
+    // 身長
+    val bodyHeight: Int,
+    // 体重
+    val bodyWeight: Int,
+    // スピード(10段階評価)
+    val speed: Int
+)
 
-enum class Position{
+enum class Position {
     LOOSE_HEAD_PROP,
     HOOKER,
     TIGHT_HEAD_PROP,
@@ -28,11 +35,11 @@ enum class Position{
     FULLBACK
 }
 
-enum class PositionCategory1{
-    FORWARDS,BACKS
+enum class PositionCategory1 {
+    FORWARDS, BACKS
 }
 
-enum class PositionCategory2{
+enum class PositionCategory2 {
     TIGHT_FIVE,
     LOOSE_FORWARDS,
     INSIDE_BACKS,
