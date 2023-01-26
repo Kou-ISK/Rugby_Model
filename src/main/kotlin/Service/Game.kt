@@ -2,6 +2,7 @@ package Service
 
 import Model.Team.Team
 import Service.SetPlay.LineOut
+import Service.SetPlay.Scrum
 import Service.Setting.PlayerSetting
 
 class Game {
@@ -14,8 +15,15 @@ class Game {
             println(Team2.playerList)
             // ラインアウトを10回試行
             for (i in 1..10) {
-                println(LineOut.getResult(Team1, Team2))
+                println("LineOut: " + LineOut.getResult(Team1, Team2))
             }
+            
+            var count = 0
+            for (i in 1..100) {
+                if (Scrum.getResult(Team1, Team2) == Scrum.RESULT.WON) count++
+                println("Scrum:" + Scrum.getResult(Team1, Team2))
+            }
+            println(count)
         }
     }
 }

@@ -23,7 +23,7 @@ class LineOut {
 
         // 乱数でジャンプ位置を決定する
         private fun jump(Team: Team): Int {
-            // TODO チームのjumpの選好によって乱数の出現頻度をコントロールする
+            // TODO チームのjumpの選好によって乱数の出現頻度をコントロールする（重みづけ乱数を取る関数を実装）
             return (1 until number + 2).random()
         }
 
