@@ -1,5 +1,6 @@
 package Service.SetPlay
 
+import Model.Descriptor.RESULT
 import Model.Player.Player
 import Model.Player.Position
 import Model.Player.PositionCategory2
@@ -42,9 +43,5 @@ class LineOut {
             // TODO Team.playerListからpositionCategory=FORWARDSのものを選ぶ(PROPは最初と最後に追加)
             return lineOutMembers
         }
-    }
-
-    enum class RESULT {
-        WON, LOST, WON_PEN, LOST_PEN, WON_FK, LOST_FK, WON_SCRUM, LOST_SCRUM
     }
 }

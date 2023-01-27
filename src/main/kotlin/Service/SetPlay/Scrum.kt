@@ -1,5 +1,6 @@
 package Service.SetPlay
 
+import Model.Descriptor.RESULT
 import Model.Player.PositionCategory1
 import Model.Team.Team
 
@@ -25,9 +26,5 @@ class Scrum {
                 RESULT.WON
             }
         }
-    }
-
-    enum class RESULT {
-        WON, LOST, WON_PEN, LOST_PEN, WON_FK, LOST_FK, WON_SCRUM, LOST_SCRUM
     }
 }
