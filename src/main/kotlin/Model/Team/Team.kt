@@ -9,14 +9,14 @@ data class Team(
     val playerList: List<Player>,
     // ポゼッション選好(1-100)　100ではキックを選択しない
     val possessionPreferences: Int,
-    // ラインアウト獲得率(0-1)
-    val lineOutWonRate: Float,
-    // ラインアウト奪取率(0-1)
-    val lineOutStealRate: Float,
-    // スクラム獲得率(0-1)
-    val scrumWonRate: Float,
-    // スクラム奪取率(0-1)
-    val scrumStealRate: Float,
-    // 規律(0-1)　高いほどペナルティを起こす確率が上がる
-    val discipline: Float
+    // ラインアウト獲得率(0-100)
+    val lineOutWonRate: Int,
+    // ラインアウト奪取率(0-100)
+    val lineOutStealRate: Int,
+    // スクラム獲得率(0-100)
+    val scrumWonRate: Int,
+    // スクラム奪取率(0-100)
+    val scrumStealRate: Int,
+    // 規律(0-100)　高いほどペナルティを起こす確率が上がる
+    val discipline: Int
 )

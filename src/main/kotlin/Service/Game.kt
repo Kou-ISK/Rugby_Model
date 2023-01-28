@@ -2,6 +2,7 @@ package Service
 
 import Model.Descriptor.RESULT
 import Model.Team.Team
+import Service.OpenPlay.Ruck
 import Service.SetPlay.LineOut
 import Service.SetPlay.RestartKick
 import Service.SetPlay.Scrum
@@ -16,11 +17,20 @@ class Game {
             println(Team1.playerList)
             println(Team2.playerList)
 
-            for (i in 1..100) {
-                var result = RestartKick.getResult(Team1, Team2)
+            for (i in 1..1000) {
+                val result = RestartKick.getResult(Team1, Team2)
                 println("Restart: $result")
                 if (result == RESULT.LOST_SCRUM) {
-                    println(Scrum.getResult(Team2, Team1))
+                    val scrumResult = Scrum.getResult(Team2, Team1)
+                    println("Scrum: $scrumResult")
+                    if (scrumResult == RESULT.WON) {
+                        var ruckResult: RESULT? = null
+                        while (ruckResult !== RESULT.LOST) {
+                            ruckResult = Ruck.getResult(Team2, Team1)
+                            println("Ruck: $ruckResult")
+                        }
+                        println("TURNOVER")
+                    }
                 }
             }
             // ラインアウトを10回試行
@@ -33,7 +43,6 @@ class Game {
                 if (Scrum.getResult(Team1, Team2) == RESULT.WON) count++
                 println("Scrum:" + Scrum.getResult(Team1, Team2))
             }
-            println(count)
         }
     }
 }

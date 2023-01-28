@@ -10,12 +10,12 @@ class test_teams {
             teamName = "Team1",
             playerList = team1PlayerList,
             possessionPreferences = 50,
-            lineOutWonRate = 0.7F,
-            lineOutStealRate = 0.2F,
-            scrumWonRate = 0.95F,
-            scrumStealRate = 0.1F,
-            discipline = 0.2F
+            lineOutWonRate = 70,
+            lineOutStealRate = 20,
+            scrumWonRate = 95,
+            scrumStealRate = 10,
+            discipline = 10
         )
-        var team2 = team1.copy(playerList = team2PlayerList, lineOutWonRate = 0.9F, possessionPreferences = 20)
+        var team2 = team1.copy(playerList = team2PlayerList, lineOutWonRate = 90, possessionPreferences = 20)
     }
 }
