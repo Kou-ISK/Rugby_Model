@@ -13,10 +13,10 @@ class Scrum {
             val defTeamTotalBodyWeight =
                 DefTeam.playerList.filter { it.positionCategory1 == PositionCategory1.FORWARDS }.sumOf { it.bodyWeight }
             // 勝敗決定アルゴリズムは要検討
-            return if (attTeamTotalBodyWeight <= defTeamTotalBodyWeight && ((1..100).random() > AttTeam.scrumWonRate * 100)
+            return if (attTeamTotalBodyWeight <= defTeamTotalBodyWeight && ((1..100).random() > AttTeam.scrumWonRate)
             ) {
                 RESULT.LOST
-            } else if ((1..100).random() < DefTeam.scrumStealRate * 100) {
+            } else if ((1..100).random() < DefTeam.scrumStealRate) {
                 if (attTeamTotalBodyWeight - AttTeam.scrumWonRate * (1..2).random() <= defTeamTotalBodyWeight) {
                     RESULT.LOST
                 } else {
