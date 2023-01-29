@@ -1,5 +1,6 @@
 package Service.SetPlay
 
+import Model.Descriptor.GameDescriptor.Companion.setNum
 import Model.Descriptor.RESULT
 import Model.Player.Player
 import Model.Player.Position
@@ -12,6 +13,7 @@ class LineOut {
         var number = 1
         fun getResult(AttTeam: Team, DefTeam: Team): RESULT {
             setNumber()
+            setNum += 1
             return if (jump(AttTeam) == jump(DefTeam) && (setMember(AttTeam)[jump(AttTeam)].bodyHeight <= setMember(
                     DefTeam
                 )[jump(DefTeam)].bodyHeight)

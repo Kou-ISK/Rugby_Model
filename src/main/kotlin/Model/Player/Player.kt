@@ -14,7 +14,13 @@ data class Player(
     // 体重
     val bodyWeight: Int,
     // スピード(10段階評価)
-    val speed: Int
+    val speed: Int,
+    // パス選好度合い
+    val passPreference: Int,
+    // キャリー選好度合い
+    val carryPreference: Int,
+    // キック選好度合い
+    val kickPreference: Int,
 )
 
 enum class Position {
