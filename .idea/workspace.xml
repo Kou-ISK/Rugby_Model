@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: Ruckを実装。変数の型を一部変更">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Descriptor/GameDescriptor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" afterDir="false" />
+    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: LineOut, PenaltyKick, FreeKickの実装&#10;- TODO StackOverflowErrorに対処する">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/FreeKick.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/PenaltyKick.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rugby_Model_Flow.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Rugby_Model_Flow.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Descriptor/ResultDescriptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Descriptor/ResultDescriptor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Ruck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Ruck.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testdata/test_players.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/testdata/test_players.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674912009238</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: Ruck, Carry, Scrum, Restart,Tryを繰り返すように実装&#10;- TODO StackOverflowErrorに対処する">
+      <created>1674970575326</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674970575326</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +138,9 @@
     <MESSAGE value="feat: スクラム関数を実装" />
     <MESSAGE value="feat: RESULTを一括管理、Restartクラスを実装" />
     <MESSAGE value="feat: Ruckを実装。変数の型を一部変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Ruckを実装。変数の型を一部変更" />
+    <MESSAGE value="feat: Ruck, Carry, Scrum, Restart,Tryを繰り返すように実装&#10;- TODO StackOverflowErrorに対処する" />
+    <MESSAGE value="feat: LineOut, PenaltyKick, FreeKickの実装&#10;- TODO StackOverflowErrorに対処する" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: LineOut, PenaltyKick, FreeKickの実装&#10;- TODO StackOverflowErrorに対処する" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

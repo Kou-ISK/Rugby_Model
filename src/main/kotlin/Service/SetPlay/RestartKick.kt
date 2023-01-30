@@ -10,7 +10,7 @@ import Service.OpenPlay.Carry
 
 class RestartKick {
     companion object {
-        fun getResult(AttTeam: Team, DefTeam: Team, type: TYPE) {
+        fun getResult(attTeam: Team, defTeam: Team, type: TYPE) {
             setNum += 1
             gainLine = when (type) {
                 TYPE.DROPOUT -> (23..65).random()
@@ -24,30 +24,25 @@ class RestartKick {
             } else LOST
 
             when (result) {
-                WON -> Carry.decisionMaking(AttTeam, DefTeam, AttTeam.playerList.random())
-                LOST -> Carry.decisionMaking(DefTeam, AttTeam, DefTeam.playerList.random())
-                WON_PEN -> {
-                    setNum += 1
-                    println("PKで再開(未実装)")
-                }
-
+                WON -> Carry.decisionMaking(attTeam, defTeam, attTeam.playerList.random())
+                LOST -> Carry.decisionMaking(defTeam, attTeam, defTeam.playerList.random())
+                WON_PEN -> PenaltyKick.getResult(attTeam, defTeam)
                 LOST_PEN -> {
-                    setNum += 1
-                    println("PKで再開(未実装)")
+                    gainLine = 100 - gainLine
+                    PenaltyKick.getResult(defTeam, attTeam)
                 }
 
-                WON_FK -> {
-                    setNum += 1
-                    println("FKで再開(未実装)")
-                }
-
+                WON_FK -> FreeKick.getResult(attTeam, defTeam)
                 LOST_FK -> {
-                    setNum += 1
-                    println("FKで再開(未実装)")
+                    gainLine = 100 - gainLine
+                    FreeKick.getResult(defTeam, attTeam)
                 }
 
-                WON_SCRUM -> Scrum.getResult(AttTeam, DefTeam)
-                LOST_SCRUM -> Scrum.getResult(DefTeam, AttTeam)
+                WON_SCRUM -> Scrum.getResult(attTeam, defTeam)
+                LOST_SCRUM -> {
+                    gainLine = 100 - gainLine
+                    Scrum.getResult(defTeam, attTeam)
+                }
             }
         }
     }

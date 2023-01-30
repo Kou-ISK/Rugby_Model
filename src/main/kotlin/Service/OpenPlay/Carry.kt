@@ -6,8 +6,10 @@ import Model.Descriptor.GameDescriptor.Companion.team2Score
 import Model.Descriptor.RESULT
 import Model.Descriptor.TYPE.*
 import Model.Player.Player
+import Model.Player.Position
 import Model.Team.Team
 import Service.Game.Companion.team1
+import Service.SetPlay.LineOut
 import Service.SetPlay.RestartKick
 import Service.SetPlay.Scrum
 
@@ -39,18 +41,27 @@ class Carry {
         fun carry(attTeam: Team, defTeam: Team, player: Player) {
             gainLine += (0..5).random()
             println("Gain Line: $gainLine")
-            if (gainLine >= 100) {
-                scoreTry(attTeam, defTeam, player)
+            // Touchの判定
+            if (player.position == Position.FULLBACK || player.position == Position.OPEN_SIDE_WINGER || player.position == Position.BLIND_SIDE_WINGER) {
+                LineOut.getResult(defTeam, attTeam)
+            } else {
+                if (gainLine >= 100) {
+                    scoreTry(attTeam, defTeam, player)
+                }
+                if (contact() == RESULT.WON) {
+                    gainLine += (5..15).random()
+                    decisionMaking(attTeam, defTeam, player)
+                } else Ruck.getResult(attTeam, defTeam)
             }
-            if (contact() == RESULT.WON) {
-                gainLine += (5..15).random()
-                decisionMaking(attTeam, defTeam, player)
-            } else Ruck.getResult(attTeam, defTeam)
         }
 
         fun pass(attTeam: Team, defTeam: Team, player: Player) {
-            var carrier = attTeam.playerList.random()
+            val carrier = attTeam.playerList.random()
             gainLine -= (0..5).random()
+            if ((1..100).random() > 85) {
+                println("Knock On")
+                Scrum.getResult(defTeam, attTeam)
+            }
             decisionMaking(attTeam, defTeam, carrier)
         }
 
