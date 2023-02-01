@@ -14,62 +14,63 @@ class LineOut {
     // TODO 変数が増え次第内容を追加
     companion object {
         var number = 1
-        fun getResult(attTeam: Team, defTeam: Team) {
-            setNumber()
-            setNum += 1
-            val result: RESULT =
-                if (jump(attTeam) == jump(defTeam) && (setMember(attTeam)[jump(attTeam)].bodyHeight <= setMember(
-                        defTeam
-                    )[jump(defTeam)].bodyHeight)
-                ) {
-                    LOST
-                } else {
-                    WON
-                }
-            when (result) {
-                WON -> {
-                    val scrumHalf = attTeam.playerList.find { it.position == Position.SCRUMHALF }
-                    if (scrumHalf != null) {
-                        Carry.decisionMaking(attTeam, defTeam, scrumHalf)
-                    }
-                }
+    }
 
-                LOST -> {
-                    GameDescriptor.gainLine = 100 - GameDescriptor.gainLine
-                    val scrumHalf = defTeam.playerList.find { it.position == Position.SCRUMHALF }
-                    if (scrumHalf != null) {
-                        Carry.decisionMaking(defTeam, attTeam, scrumHalf)
-                    }
-                }
-
-                WON_PEN -> TODO()
-                LOST_PEN -> TODO()
-                WON_FK -> TODO()
-                LOST_FK -> TODO()
-                WON_SCRUM -> TODO()
-                LOST_SCRUM -> TODO()
+    fun getResult(attTeam: Team, defTeam: Team) {
+        setNumber()
+        setNum += 1
+        val result: RESULT =
+            if (jump(attTeam) == jump(defTeam) && (setMember(attTeam)[jump(attTeam)].bodyHeight <= setMember(
+                    defTeam
+                )[jump(defTeam)].bodyHeight)
+            ) {
+                LOST
+            } else {
+                WON
             }
-        }
+        when (result) {
+            WON -> {
+                val scrumHalf = attTeam.playerList.find { it.position == Position.SCRUMHALF }
+                if (scrumHalf != null) {
+                    Carry().decisionMaking(attTeam, defTeam, scrumHalf)
+                }
+            }
 
-        // 乱数でジャンプ位置を決定する
-        fun jump(Team: Team): Int {
-            // TODO チームのjumpの選好によって乱数の出現頻度をコントロールする（重みづけ乱数を取る関数を実装）
-            return (1 until number + 2).random()
-        }
+            LOST -> {
+                GameDescriptor.gainLine = 100 - GameDescriptor.gainLine
+                val scrumHalf = defTeam.playerList.find { it.position == Position.SCRUMHALF }
+                if (scrumHalf != null) {
+                    Carry().decisionMaking(defTeam, attTeam, scrumHalf)
+                }
+            }
 
-        fun setNumber() {
-            number = (1..5).random()
+            WON_PEN -> TODO()
+            LOST_PEN -> TODO()
+            WON_FK -> TODO()
+            LOST_FK -> TODO()
+            WON_SCRUM -> TODO()
+            LOST_SCRUM -> TODO()
         }
+    }
 
-        // LineOut参加メンバーを決定する
-        fun setMember(Team: Team): List<Player> {
-            // サンプルのメンバーリスト
-            val lineOutMembers: List<Player>?
-            val forwards =
-                Team.playerList.filter { it.positionCategory2 == PositionCategory2.LOOSE_FORWARDS || it.position == Position.LEFT_LOCK || it.position == Position.RIGHT_LOCK }
-            lineOutMembers =
-                Team.playerList.filter { it.position == Position.LOOSE_HEAD_PROP } + forwards.take(number) + Team.playerList.filter { it.position == Position.TIGHT_HEAD_PROP }
-            return lineOutMembers
-        }
+    // 乱数でジャンプ位置を決定する
+    private fun jump(Team: Team): Int {
+        // TODO チームのjumpの選好によって乱数の出現頻度をコントロールする（重みづけ乱数を取る関数を実装）
+        return (1 until number + 2).random()
+    }
+
+    private fun setNumber() {
+        number = (1..5).random()
+    }
+
+    // LineOut参加メンバーを決定する
+    private fun setMember(Team: Team): List<Player> {
+        // サンプルのメンバーリスト
+        val lineOutMembers: List<Player>?
+        val forwards =
+            Team.playerList.filter { it.positionCategory2 == PositionCategory2.LOOSE_FORWARDS || it.position == Position.LEFT_LOCK || it.position == Position.RIGHT_LOCK }
+        lineOutMembers =
+            Team.playerList.filter { it.position == Position.LOOSE_HEAD_PROP } + forwards.take(number) + Team.playerList.filter { it.position == Position.TIGHT_HEAD_PROP }
+        return lineOutMembers
     }
 }

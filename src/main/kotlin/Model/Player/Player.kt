@@ -21,7 +21,32 @@ data class Player(
     val carryPreference: Int,
     // キック選好度合い
     val kickPreference: Int,
-)
+) {
+
+    fun setPositionCategory() {
+        when (position) {
+            Position.LOOSE_HEAD_PROP, Position.HOOKER, Position.TIGHT_HEAD_PROP, Position.LEFT_LOCK, Position.RIGHT_LOCK -> {
+                positionCategory1 = PositionCategory1.FORWARDS
+                positionCategory2 = PositionCategory2.TIGHT_FIVE
+            }
+
+            Position.BLIND_SIDE_FLANKER, Position.OPEN_SIDE_FLANKER, Position.NUMBER_EIGHT -> {
+                positionCategory1 = PositionCategory1.FORWARDS
+                positionCategory2 = PositionCategory2.LOOSE_FORWARDS
+            }
+
+            Position.SCRUMHALF, Position.FLYHALF, Position.INSIDE_CENTER, Position.OUTSIDE_CENTER -> {
+                positionCategory1 = PositionCategory1.BACKS
+                positionCategory2 = PositionCategory2.INSIDE_BACKS
+            }
+
+            Position.BLIND_SIDE_WINGER, Position.OPEN_SIDE_WINGER, Position.FULLBACK -> {
+                positionCategory1 = PositionCategory1.BACKS
+                positionCategory2 = PositionCategory2.OUTSIDE_BACKS
+            }
+        }
+    }
+}
 
 enum class Position {
     LOOSE_HEAD_PROP,
