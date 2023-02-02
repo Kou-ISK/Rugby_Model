@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Application.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Ruck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Ruck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/FreeKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/FreeKick.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/PenaltyKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/PenaltyKick.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/Setting/PlayerSetting.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675082842669</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する">
+      <created>1675262696345</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675262696345</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
