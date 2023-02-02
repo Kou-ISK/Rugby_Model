@@ -7,13 +7,18 @@ import Model.Descriptor.TYPE.*
 import Model.Team.Team
 import Service.SetPlay.RestartKick
 
-class Game {
+class Game(team1: Team, team2: Team) {
     companion object {
-        var team1: Team = null
-        var team2: Team = null
+        lateinit var team1: Team
+        lateinit var team2: Team
     }
 
-    fun play(team1: Team, team2: Team) {
+    init {
+        Game.team1 = team1
+        Game.team2 = team2
+    }
+
+    fun play() {
         // ポジションカテゴリの設定
         for (player in team1.playerList + team2.playerList) {
             player.setPositionCategory()

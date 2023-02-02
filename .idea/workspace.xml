@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する">
+    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: WIPコミット&#10;&#10;- TODO StackOverflowErrorに対処する">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Application.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675262696345</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: WIPコミット&#10;&#10;- TODO StackOverflowErrorに対処する">
+      <created>1675350049492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675350049492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,7 +156,8 @@
     <MESSAGE value="feat: Ruck, Carry, Scrum, Restart,Tryを繰り返すように実装&#10;- TODO StackOverflowErrorに対処する" />
     <MESSAGE value="feat: LineOut, PenaltyKick, FreeKickの実装&#10;- TODO StackOverflowErrorに対処する" />
     <MESSAGE value="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する" />
+    <MESSAGE value="feat: WIPコミット&#10;&#10;- TODO StackOverflowErrorに対処する" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: WIPコミット&#10;&#10;- TODO StackOverflowErrorに対処する" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
