@@ -20,10 +20,6 @@ class Game(team1: Team, team2: Team) {
 
     fun play() {
         // ポジションカテゴリの設定
-        for (player in team1.playerList + team2.playerList) {
-            player.setPositionCategory()
-        }
-
         println(team1.playerList)
         println(team2.playerList)
 

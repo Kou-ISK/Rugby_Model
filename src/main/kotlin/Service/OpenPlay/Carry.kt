@@ -41,12 +41,12 @@ class Carry {
         gainLine += (0..5).random()
         println("Gain Line: $gainLine")
         // Touchの判定
+        if (gainLine >= 100) {
+            scoreTry(attTeam, defTeam, player)
+        }
         if (player.position == Position.FULLBACK || player.position == Position.OPEN_SIDE_WINGER || player.position == Position.BLIND_SIDE_WINGER) {
             LineOut().getResult(defTeam, attTeam)
         } else {
-            if (gainLine >= 100) {
-                scoreTry(attTeam, defTeam, player)
-            }
             if (contact() == RESULT.WON) {
                 gainLine += (5..15).random()
                 decisionMaking(attTeam, defTeam, player)
