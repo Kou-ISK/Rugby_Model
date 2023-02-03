@@ -4,6 +4,7 @@ import Model.Descriptor.GameDescriptor.Companion.gainLine
 import Model.Descriptor.GameDescriptor.Companion.setNum
 import Model.Team.Team
 import Service.OpenPlay.Carry
+import Service.OpenPlay.OpenPlay
 
 class FreeKick {
     fun getResult(attTeam: Team, defTeam: Team) {
@@ -18,7 +19,7 @@ class FreeKick {
         } else {
             // tap
             setNum += 1
-            Carry().decisionMaking(attTeam, defTeam, attTeam.playerList.random())
+            OpenPlay().openPlay(attTeam, defTeam, attTeam.playerList.random())
         }
     }
 }

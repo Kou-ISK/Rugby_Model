@@ -7,6 +7,7 @@ import Model.Descriptor.RESULT.*
 import Model.Descriptor.TYPE
 import Model.Team.Team
 import Service.OpenPlay.Carry
+import Service.OpenPlay.OpenPlay
 
 class RestartKick {
     fun getResult(attTeam: Team, defTeam: Team, type: TYPE) {
@@ -23,8 +24,8 @@ class RestartKick {
         } else LOST
 
         when (result) {
-            WON -> Carry().decisionMaking(attTeam, defTeam, attTeam.playerList.random())
-            LOST -> Carry().decisionMaking(defTeam, attTeam, defTeam.playerList.random())
+            WON -> OpenPlay().openPlay(attTeam, defTeam, attTeam.playerList.random())
+            LOST -> OpenPlay().openPlay(defTeam, attTeam, defTeam.playerList.random())
             WON_PEN -> PenaltyKick().getResult(attTeam, defTeam)
             LOST_PEN -> {
                 gainLine = 100 - gainLine
@@ -42,6 +43,8 @@ class RestartKick {
                 gainLine = 100 - gainLine
                 Scrum().getResult(defTeam, attTeam)
             }
+
+            else -> TODO()
         }
     }
 }

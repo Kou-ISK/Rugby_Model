@@ -8,7 +8,7 @@ import Model.Player.Player
 import Model.Player.Position
 import Model.Player.PositionCategory2
 import Model.Team.Team
-import Service.OpenPlay.Carry
+import Service.OpenPlay.OpenPlay
 
 class LineOut {
     // TODO 変数が増え次第内容を追加
@@ -29,19 +29,10 @@ class LineOut {
                 WON
             }
         when (result) {
-            WON -> {
-                val scrumHalf = attTeam.playerList.find { it.position == Position.SCRUMHALF }
-                if (scrumHalf != null) {
-                    Carry().decisionMaking(attTeam, defTeam, scrumHalf)
-                }
-            }
-
+            WON -> OpenPlay().openPlay(attTeam, defTeam, attTeam.getScrumHalf())
             LOST -> {
                 GameDescriptor.gainLine = 100 - GameDescriptor.gainLine
-                val scrumHalf = defTeam.playerList.find { it.position == Position.SCRUMHALF }
-                if (scrumHalf != null) {
-                    Carry().decisionMaking(defTeam, attTeam, scrumHalf)
-                }
+                OpenPlay().openPlay(defTeam, attTeam, defTeam.getScrumHalf())
             }
 
             WON_PEN -> TODO()
@@ -50,6 +41,7 @@ class LineOut {
             LOST_FK -> TODO()
             WON_SCRUM -> TODO()
             LOST_SCRUM -> TODO()
+            else -> {}
         }
     }
 

@@ -3,6 +3,7 @@ package Service.SetPlay
 import Model.Descriptor.GameDescriptor.Companion.setNum
 import Model.Team.Team
 import Service.OpenPlay.Carry
+import Service.OpenPlay.OpenPlay
 
 class PenaltyKick {
     fun getResult(attTeam: Team, defTeam: Team) {
@@ -13,7 +14,7 @@ class PenaltyKick {
         } else if (i in 96..97) {
             // tap
             setNum += 1
-            Carry().decisionMaking(attTeam, defTeam, attTeam.playerList.random())
+            OpenPlay().openPlay(attTeam, defTeam, attTeam.playerList.random())
         } else {
             // scrum
             Scrum().getResult(attTeam, defTeam)

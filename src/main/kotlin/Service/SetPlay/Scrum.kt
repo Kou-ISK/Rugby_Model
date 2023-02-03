@@ -8,6 +8,7 @@ import Model.Player.Position
 import Model.Player.PositionCategory1
 import Model.Team.Team
 import Service.OpenPlay.Carry
+import Service.OpenPlay.OpenPlay
 
 class Scrum {
     // TODO 変数が増え次第内容を追加
@@ -35,7 +36,7 @@ class Scrum {
             WON -> {
                 val scrumHalf = attTeam.playerList.find { it.position == Position.SCRUMHALF }
                 if (scrumHalf != null) {
-                    Carry().decisionMaking(attTeam, defTeam, scrumHalf)
+                    OpenPlay().openPlay(attTeam, defTeam, scrumHalf)
                 }
             }
 
@@ -43,7 +44,7 @@ class Scrum {
                 gainLine = 100 - gainLine
                 val scrumHalf = defTeam.playerList.find { it.position == Position.SCRUMHALF }
                 if (scrumHalf != null) {
-                    Carry().decisionMaking(defTeam, attTeam, scrumHalf)
+                    OpenPlay().openPlay(defTeam, attTeam, scrumHalf)
                 }
             }
 
@@ -64,6 +65,8 @@ class Scrum {
                 gainLine = 100 - gainLine
                 getResult(defTeam, attTeam)
             }
+
+            else -> TODO()
         }
     }
 }

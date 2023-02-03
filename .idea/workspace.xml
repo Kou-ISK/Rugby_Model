@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: Gameクラスにコンストラクタインジェクション&#10;&#10;- TODO StackOverflowErrorに対処する">
+    <list default="true" id="741fb67b-63c6-4bcb-80e8-19d6554ebcf5" name="変更" comment="feat: Player data classに初期化処理を追加&#10;&#10;- TODO StackOverflowErrorに対処する">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/OpenPlay.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Player/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Descriptor/ResultDescriptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Descriptor/ResultDescriptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Model/Team/Team.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Model/Team/Team.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Carry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/OpenPlay/Ruck.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/FreeKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/FreeKick.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/LineOut.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/PenaltyKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/PenaltyKick.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/RestartKick.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Service/SetPlay/Scrum.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675350725012</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: Player data classに初期化処理を追加&#10;&#10;- TODO StackOverflowErrorに対処する">
+      <created>1675351035186</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675351035186</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +182,8 @@
     <MESSAGE value="feat: 各メソッドをcompanion objectから除去。PlayerデータクラスにpositionCategoryを設定するメソッドを追加。&#10;&#10;- TODO StackOverflowErrorに対処する" />
     <MESSAGE value="feat: WIPコミット&#10;&#10;- TODO StackOverflowErrorに対処する" />
     <MESSAGE value="feat: Gameクラスにコンストラクタインジェクション&#10;&#10;- TODO StackOverflowErrorに対処する" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Gameクラスにコンストラクタインジェクション&#10;&#10;- TODO StackOverflowErrorに対処する" />
+    <MESSAGE value="feat: Player data classに初期化処理を追加&#10;&#10;- TODO StackOverflowErrorに対処する" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Player data classに初期化処理を追加&#10;&#10;- TODO StackOverflowErrorに対処する" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

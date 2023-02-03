@@ -1,6 +1,7 @@
 package Model.Team
 
 import Model.Player.Player
+import Model.Player.Position
 
 data class Team(
     // チーム名
@@ -19,4 +20,8 @@ data class Team(
     val scrumStealRate: Int,
     // 規律(0-100)　高いほどペナルティを起こす確率が上がる
     val discipline: Int
-)
+) {
+    fun getScrumHalf(): Player {
+        return playerList.find { it.position == Position.SCRUMHALF }!!
+    }
+}
