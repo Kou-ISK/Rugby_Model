@@ -14,7 +14,7 @@ class test_players {
                 speed = 3,
                 passPreference = 5,
                 carryPreference = 94,
-                kickPreference = 1
+                kickPreference = 1,
             ), Player(
                 shirtNo = 2,
                 position = Position.HOOKER,
@@ -23,7 +23,8 @@ class test_players {
                 speed = 3,
                 passPreference = 5,
                 carryPreference = 94,
-                kickPreference = 1
+                kickPreference = 1,
+                kickerFlag = false
             ), Player(
                 shirtNo = 3,
                 position = Position.TIGHT_HEAD_PROP,
@@ -95,7 +96,9 @@ class test_players {
                 speed = 7,
                 passPreference = 85,
                 carryPreference = 3,
-                kickPreference = 12
+                kickPreference = 12,
+                kickerFlag = true,
+                shotSuccessRatio = 85
             ), Player(
                 shirtNo = 11,
                 position = Position.BLIND_SIDE_WINGER,

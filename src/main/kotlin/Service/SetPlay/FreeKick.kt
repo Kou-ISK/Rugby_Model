@@ -1,9 +1,7 @@
 package Service.SetPlay
 
 import Model.Descriptor.GameDescriptor.Companion.gainLine
-import Model.Descriptor.GameDescriptor.Companion.setNum
 import Model.Team.Team
-import Service.OpenPlay.Carry
 import Service.OpenPlay.OpenPlay
 
 class FreeKick {
@@ -18,7 +16,6 @@ class FreeKick {
             LineOut().getResult(defTeam, attTeam)
         } else {
             // tap
-            setNum += 1
             OpenPlay().openPlay(attTeam, defTeam, attTeam.playerList.random())
         }
     }

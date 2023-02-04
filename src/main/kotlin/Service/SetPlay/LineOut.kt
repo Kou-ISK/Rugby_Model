@@ -17,8 +17,8 @@ class LineOut {
     }
 
     fun getResult(attTeam: Team, defTeam: Team) {
-        setNumber()
         setNum += 1
+        setNumber()
         val result: RESULT =
             if (jump(attTeam) == jump(defTeam) && (setMember(attTeam)[jump(attTeam)].bodyHeight <= setMember(
                     defTeam
@@ -35,13 +35,7 @@ class LineOut {
                 OpenPlay().openPlay(defTeam, attTeam, defTeam.getScrumHalf())
             }
 
-            WON_PEN -> TODO()
-            LOST_PEN -> TODO()
-            WON_FK -> TODO()
-            LOST_FK -> TODO()
-            WON_SCRUM -> TODO()
-            LOST_SCRUM -> TODO()
-            else -> {}
+            else -> TODO()
         }
     }
 

@@ -21,6 +21,10 @@ data class Player(
     val carryPreference: Int,
     // キック選好度合い
     val kickPreference: Int,
+    // ショット成功率
+    var shotSuccessRatio: Int? = null,
+    // キッカーかどうか
+    var kickerFlag: Boolean = false
 ) {
 
     init {

@@ -15,7 +15,7 @@ class RestartKick {
         gainLine = when (type) {
             TYPE.DROPOUT -> (23..65).random()
             TYPE.GOAL_LINE_DROPOUT -> (5..50).random()
-            TYPE.RESTART -> (60..100).random()
+            TYPE.FIFTY_METER_RESTART -> (60..100).random()
         }
         val result: RESULT = if ((1..100).random() > 90) {
             if ((1..100).random() > 90) {
