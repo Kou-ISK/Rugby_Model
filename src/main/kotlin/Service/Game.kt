@@ -33,7 +33,7 @@ class Game(team1: Team, team2: Team) {
             else println("-*-*-*-*-*-*-*-*- Second Half Kick Off -*-*-*-*-*-*-*-*-")
             setNum = 0
             while (setNum < 20) {
-                println("----------" + playResult.startOfPossession + "----------")
+                println("----------${playResult.attTeam.teamName} ${playResult.startOfPossession}----------")
                 when (playResult.startOfPossession) {
                     LINEOUT -> LineOut().getResult(playResult.attTeam, playResult.defTeam)
                     SCRUM -> Scrum().getResult(playResult.attTeam, playResult.defTeam)

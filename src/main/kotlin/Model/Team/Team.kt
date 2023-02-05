@@ -9,8 +9,8 @@ data class Team(
     val teamName: String,
     // プレーヤーのリスト
     val playerList: List<Player>,
-    // ポゼッション選好(1-100)　100ではキックを選択しない
-    val possessionPreferences: Int,
+    // キック選好(0-5)
+    val kickPreferences: Int,
     // ラインアウト獲得率(0-100)
     val lineOutWonRate: Int,
     // ラインアウト奪取率(0-100)

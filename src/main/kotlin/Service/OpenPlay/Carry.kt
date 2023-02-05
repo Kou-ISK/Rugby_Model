@@ -9,14 +9,15 @@ import Model.Team.Team
 class Carry {
     fun decisionMaking(attTeam: Team, defTeam: Team, player: Player): RESULT {
         val decisionList = mutableListOf<Int>()
+        val modifiedKickPreference = if (player.kickerFlag) player.kickPreference * attTeam.kickPreferences
+        else player.kickPreference
         for (i in 1..player.carryPreference) decisionList += 0
         for (i in 1..player.passPreference) decisionList += 1
-        for (i in 1..player.kickPreference) decisionList += 2
+        for (i in 1..modifiedKickPreference) decisionList += 2
         when (decisionList.random()) {
             0 -> {
                 println("Carry")
                 val result = carry(attTeam, defTeam, player)
-                println("RESULT: $result")
                 return result
             }
 

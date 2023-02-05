@@ -28,6 +28,7 @@ class LineOut {
             } else {
                 WON
             }
+        println("Result: $result")
         when (result) {
             WON -> OpenPlay().openPlay(attTeam, defTeam, attTeam.getScrumHalf())
             LOST -> {

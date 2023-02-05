@@ -9,7 +9,7 @@ class test_teams {
         var team1 = Team(
             teamName = "REDS",
             playerList = team1PlayerList,
-            possessionPreferences = 50,
+            kickPreferences = 3,
             lineOutWonRate = 70,
             lineOutStealRate = 20,
             scrumWonRate = 95,
@@ -22,7 +22,7 @@ class test_teams {
             teamName = "BLUES",
             playerList = team2PlayerList,
             lineOutWonRate = 90,
-            possessionPreferences = 20,
+            kickPreferences = 0,
             penaltyGoalRange = 50,
             penaltyGoalPreference = 80
         )

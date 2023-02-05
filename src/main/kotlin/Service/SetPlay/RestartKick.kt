@@ -6,7 +6,6 @@ import Model.Descriptor.RESULT
 import Model.Descriptor.RESULT.*
 import Model.Descriptor.TYPE
 import Model.Team.Team
-import Service.OpenPlay.Carry
 import Service.OpenPlay.OpenPlay
 
 class RestartKick {
@@ -22,7 +21,7 @@ class RestartKick {
                 WON
             } else LOST_SCRUM
         } else LOST
-
+        println("Result: $result")
         when (result) {
             WON -> OpenPlay().openPlay(attTeam, defTeam, attTeam.playerList.random())
             LOST -> OpenPlay().openPlay(defTeam, attTeam, defTeam.playerList.random())

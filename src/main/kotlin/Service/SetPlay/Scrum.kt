@@ -7,7 +7,6 @@ import Model.Descriptor.RESULT.*
 import Model.Player.Position
 import Model.Player.PositionCategory1
 import Model.Team.Team
-import Service.OpenPlay.Carry
 import Service.OpenPlay.OpenPlay
 
 class Scrum {
@@ -32,6 +31,7 @@ class Scrum {
             } else {
                 WON
             }
+        println("Result: $result")
         when (result) {
             WON -> {
                 val scrumHalf = attTeam.playerList.find { it.position == Position.SCRUMHALF }
